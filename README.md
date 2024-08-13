@@ -15,7 +15,9 @@ Web adaptation of the iOS and Android app built by [@ivanseidel](https://github.
 
 [Video Demo](https://youtube.com/shorts/Edf6UZbIuDc)
 
-<img src="demo/1.PNG" alt="Screenshot of Chawzi in progress" width="200"/>
-<img src="demo/2.PNG" alt="Screenshot of Chawzi with 2 groups selected" width="200"/>
-<img src="demo/3.PNG" alt="Screenshot of Chawzi with 1 finger selected" width="200"/>
-<img src="demo/4.PNG" alt="Screenshot of Chawzi with 2 fingers selected" width="200"/>
+<p align="center">
+  <img src="demo/1.PNG" alt="Screenshot of Chawzi in progress" width="200"/>
+  <img src="demo/2.PNG" alt="Screenshot of Chawzi with 2 groups selected" width="200"/>
+  <img src="demo/3.PNG" alt="Screenshot of Chawzi with 1 finger selected" width="200"/>
+  <img src="demo/4.PNG" alt="Screenshot of Chawzi with 2 fingers selected" width="200"/>
+</p>
