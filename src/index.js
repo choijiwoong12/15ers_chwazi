@@ -266,4 +266,8 @@ function chunkify(array, n) {
 
 document.addEventListener("DOMContentLoaded", () => {
   new ChwaziCanvas(document.querySelector("canvas"));
+
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js");
+  }
 });

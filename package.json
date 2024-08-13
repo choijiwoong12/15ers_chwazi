@@ -2,7 +2,8 @@
   "name": "chwazi",
   "version": "1.0.0",
   "scripts": {
-    "js:build": "npx minify src/index.js > build/index.js",
+    "js:main:build": "npx minify src/index.js > build/index.js",
+    "js:sw:build": "npx minify src/sw.js > build/sw.js",
     "html:build": "npx minify src/index.html > build/index.html",
     "css:build": "npx tailwindcss -i src/index.css -o build/index.css --minify",
     "css:watch": "tailwindcss -i src/index.css -o build/index.css --watch",

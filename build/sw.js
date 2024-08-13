@@ -1,0 +1,1 @@
+var a='chwazi-joelw-dev',b=['/','/index.html','/index.css','/index.js'];self.addEventListener('install',A=>A.waitUntil(caches.open(a).then(_=>_.addAll(b))));self.addEventListener('fetch',B=>B.respondWith(caches.match(B.request).then(c=>c||fetch(B.request))));
