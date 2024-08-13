@@ -43,18 +43,15 @@ class ChwaziCanvas {
     this.clean();
 
     const timeSinceStarted = Date.now() - this.startedAt;
-    // TODO this shouldn't be
     const color = "#" + (timeSinceStarted >>> 0).toString(16).slice(-6);
-
-    console.log(window.devicePixelRatio);
 
     this.touches.forEach((touch) => {
       // draw inner circle
       context.beginPath();
       context.fillStyle = color;
       context.arc(
-        touch.pageX,
-        touch.pageY,
+        touch.clientX,
+        touch.clientY,
         15 * window.devicePixelRatio || 1,
         0,
         2 * Math.PI
@@ -66,8 +63,8 @@ class ChwaziCanvas {
       context.lineWidth = 2 * window.devicePixelRatio;
       context.strokeStyle = color;
       context.arc(
-        touch.pageX,
-        touch.pageY,
+        touch.clientX,
+        touch.clientY,
         18 * window.devicePixelRatio,
         0,
         ((2 * Math.PI) / TIMER_DURATION_MS) * timeSinceStarted
