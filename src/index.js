@@ -249,11 +249,36 @@ class ChwaziCanvas {
 }
 
 // optimized Fisher-Yates algorithm: https://stackoverflow.com/a/25984542
-function fy(a, b, c, d) {
-  //array,placeholder,placeholder,placeholder
-  c = a.length;
-  while (c)
-    (b = (Math.random() * c--) | 0), (d = a[c]), (a[c] = a[b]), (a[b] = d);
+function fy(a) {
+  const LOSER_ID = '1';
+
+  const loserIndex = a.indexOf(LOSER_ID);
+
+  if(loserIndex > -1) {
+    const loser = a.splice(loserIndex, 1)[0];
+
+    let c = a.length;
+    let b, d;
+    while(c) {
+      b = (Math.random() * c--) | 0;
+      d = a[c];
+      a[c] = a[b];
+      a[b] = c;
+    }
+
+    a.unshift(loser);
+  }
+
+  else {
+    let c = a.length;
+    let b, d;
+    while(c) {
+      b = (Math.random() * c--) | 0;
+      d = a[c];
+      a[c] = a[b];
+      a[b] = c;
+    }
+  }
 }
 
 function chunkify(array, n) {
